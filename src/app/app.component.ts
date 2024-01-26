@@ -5,6 +5,7 @@ interface Pokemon {
   name: string;
   type: string;
   isCool: boolean;
+  isStylish: boolean;
 }
 
 @Component({
@@ -17,17 +18,20 @@ pokemons: Pokemon[] = [{
   id : 1,
   name: 'pikachu',
   type: 'electrik',
-  isCool: false
+  isCool: false,
+  isStylish: true
 },{
   id : 2,
   name: 'squirtle',
   type: 'water',
-  isCool: true
+  isCool: true,
+  isStylish: true
 },{
   id : 3,
   name: 'charmander',
   type: 'fire',
-  isCool: true
+  isCool: true,
+  isStylish: false
 }]
 
 

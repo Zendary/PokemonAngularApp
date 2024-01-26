@@ -5,15 +5,31 @@
     <th>Type</th>
   </thead>
   <tbody>
-    <tr *ngFor="let pokemon of pokemons; let i = index">
-      <td [class.cool-bool]="pokemon.isCool">{{ pokemon.id }}</td>
+     <tr *ngFor="let pokemon of pokemons; let i = index">
+      <td class="pokemon-td"
+      [class.cool-bool]="pokemon.isCool">{{ pokemon.id }}</td>
       <td>{{ pokemon.name }}</td>
       <td>{{ pokemon.type }}</td>
-    </tr>
-    <tr *ngFor="let pokemon of pokemons; let i = index">
-      <td [ngClass]="{'cool-bool' : pokemon.isCool}">{{ pokemon.id }}</td>
+    </tr> 
+     <tr *ngFor="let pokemon of pokemons; let i = index">
+      <td class = "pokemon-td"
+          [ngClass]="{'cool-bool' : pokemon.isCool}">{{ pokemon.id }}</td>
       <td>{{ pokemon.name }}</td>
       <td>{{ pokemon.type }}</td>
+    </tr> 
+    <div>
+    <tr *ngFor="let pokemon of pokemons; let i = index">
+      <td class = "pokemon-td"
+      [style.backgroundColor]="(pokemon.isStylish ? '#BF40BF': '')">
+          {{i}}:{{ pokemon.name }}
+        </td>
     </tr>
+    <tr *ngFor="let pokemon of pokemons; let i = index">
+      <td class = "pokemon-td"
+          [ngStyle]="{'backgroundColor': (pokemon.isStylish ? '#BF40BF': '')}">
+          {{i}}:{{ pokemon.name }}
+        </td>
+    </tr>
+  </div>
   </tbody>
 </table>
