@@ -12,7 +12,10 @@ export class PokemonTemplateFormComponent {
 
   constructor(private pokemonService: PokemonService) { }
 
- 
+ toggleIsCool(object: any) {
+  console.log(object);
+  }
+
 
   ngOnInit(): void {
     this.pokemonService.getPokemon(1).subscribe((data: Pokemon) => {

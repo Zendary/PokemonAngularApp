@@ -1,21 +1,74 @@
 {
-    "pokemon": [{
-        "id" : 1,
-        "name": "pikachu",
-        "type": "electric",
-        "isCool": false,
-        "isStylish": true
-      },{
-        "id" : 2,
-        "name": "squirtle",
-        "type": "water",
-        "isCool": true,
-        "isStylish": true
-      },{
-        "id" : 3,
-        "name": "charmander",
-        "type": "fire",
-        "isCool": true,
-        "isStylish": false
-      }]
+    "pokemon": [
+        {
+            "id": 1,
+            "name": "bulbasaur",
+            "type": "grass",
+            "isCool": true,
+            "isStylish": false
+        },
+        {
+            "id": 2,
+            "name": "ivysaur",
+            "type": "grass",
+            "isCool": false,
+            "isStylish": true
+        },
+        {
+            "id": 3,
+            "name": "venusaur",
+            "type": "grass",
+            "isCool": true,
+            "isStylish": true
+        },
+        {
+            "id": 4,
+            "name": "charmander",
+            "type": "fire",
+            "isCool": false,
+            "isStylish": true
+        },
+        {
+            "id": 5,
+            "name": "charmeleon",
+            "type": "fire",
+            "isCool": true,
+            "isStylish": false
+        },
+        {
+            "id": 6,
+            "name": "charizard",
+            "type": "fire",
+            "isCool": true,
+            "isStylish": true
+        },
+        {
+            "id": 7,
+            "name": "squirtle",
+            "type": "water",
+            "isCool": false,
+            "isStylish": true
+        },
+        {
+            "id": 8,
+            "name": "wartortle",
+            "type": "water",
+            "isCool": true,
+            "isStylish": false
+        },
+        {
+            "id": 9,
+            "name": "blastoise",
+            "type": "water",
+            "isCool": true,
+            "isStylish": true
+        },
+        {
+            "id": 10,
+            "name": "caterpie",
+            "type": "bug",
+            "isCool": false,
+            "isStylish": false
+        }
+    ]
 }
