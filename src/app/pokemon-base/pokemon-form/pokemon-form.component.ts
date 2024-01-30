@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { PokemonService } from '../services/pokemon.service';
-import { Pokemon, PokemonType } from '../models/pokemon';
+import { PokemonService } from '../../services/pokemon.service';
+import { Pokemon, PokemonType } from '../../models/pokemon';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-template-form',
-  templateUrl: './pokemon-template-form.component.html',
-  styleUrl: './pokemon-template-form.component.css'
+  templateUrl: './pokemon-form.component.html',
+  styleUrl: './pokemon-form.component.css'
 })
 export class PokemonTemplateFormComponent {
   pokemon!: Pokemon;
@@ -84,10 +85,12 @@ export class PokemonTemplateFormComponent {
     }
   ];
 
-  constructor(private pokemonService: PokemonService) { }
+  constructor(private pokemonService: PokemonService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
- toggleIsCool(object: any) {
-  console.log(object);
+  toggleIsCool(object: any) {
+    console.log(object);
   }
 
   handleSubmit(object: any) {
@@ -95,9 +98,17 @@ export class PokemonTemplateFormComponent {
   }
 
   ngOnInit(): void {
-    this.pokemonService.getPokemon(1).subscribe((data: Pokemon) => {
-      this.pokemon = data;
-  })
-}
+    this.pokemon = {} as Pokemon;
+    this.route.params.subscribe((data: Params) => {
+      this.pokemonService.getPokemon(1).subscribe((data: Pokemon) => {
+        this.pokemon = data;
+      });
+    })
 
-}
+  }
+
+  back() : void {
+    this.router.navigate(['/pokemon']);
+  }
+  
+  }

@@ -1,3 +1,7 @@
 .cool-bool {
   background-color: teal;
 }
+
+.active{
+  background-color: lightpink;
+}
